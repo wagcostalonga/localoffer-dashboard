@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="/style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header__container">
+
+      <div class="header__container-logo">
+        <img class="img-logo" src="/assets/local_offer-24px.svg" alt="Logo">
+        <h2 class="title-logo">LocalOffer</h2>
+        <small>ADMIN</small>
+      </div>
+
+      <div class="header__container-nav">
+        <ul class="notifications-list">
+          <li>
+             <img class="img-icon" src="/assets/notifications_none-24px.svg" alt="notifications">
+             <span class="notification-amount">3</span>
+          </li>
+          <li>
+            <img class="img-icon" src="/assets/email-24px.svg" alt="e-mail">
+            <span class="notification-amount">8</span>
+          </li>            
+        </ul>
+        <div class="vertical-line"></div>
+        <p>Wagner Costalonga</p>
+        <img class="img-photo" src="https://avatars2.githubusercontent.com/u/15238694?s=460&u=68b79c87cf78838e2bbed9b2a3a9287403a1514e&v=4" alt="Wagner Costalonga">
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <div id="navbar">
+    <div class="navbar__container">
+
+      <div class="navbar__header">
+        <h1 class="title-dashboard">Menu Dashboard</h1>
+        
+        <div class="dropdown">
+          <input type="checkbox" id="toggle" class="btn nav-toggle">
+          <label for="toggle" class="nav-toggle">
+            <span class="btn-icon">&nbsp;</span>
+          </label>
+        </div>
+      </div>
+
+      <ul class="menu" id="list">
+        <li>
+          <a href="#">
+            <img class="img-icon" src="/assets/home-24px.svg" alt="Eventos">
+            <p>Eventos</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="img-icon" src="/assets/touch_app-24px.svg" alt="Oportunidades">
+            <p>Oportunidades</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="img-icon" src="/assets/grade-24px.svg" alt="Favoritos">
+            <p>Lista de Favoritos</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="img-icon" src="/assets/headset_mic-24px.svg" alt="Atendimento">
+            <p>Atendimento</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <section id="form">
+    <div class="form__container">
+      <h2>Novo Evento</h2>
+      <div class="horizontal-line"></div>
+
+      <form id="form-event">
+        <div class="input__group">
+          <label class="data-label" for="title">Título: </label>
+          <input type="text" name="title">
+        </div>
+
+        <div class="input__group">
+          <label class="data-label" for="description">Descrição: </label>
+          <textarea name="description" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="input__group">
+          <label class="data-label" for="data-label">Local: </label>
+          <input type="text" name="local">
+        </div>
+
+
+        <div class="input__group">
+          <label class="data-label" for="all-day">
+            Será durante o dia todo?
+          </label>
+
+          <div class="radio__group">
+            <input type="radio" id="yes-checked" name="radio" checked>
+            <label for="yes-checked">Sim</label>
+          </div>
+
+          <div class="radio__group">
+            <input type="radio" id="no-checked" name="radio">
+            <label for="no-checked">Não</label>
+          </div>
+        </div>
+        
+
+        <div class="input__group">
+          <label class="data-label" for="what-hours">
+            Qual o horário?
+          </label>
+
+          <div class="input__group-2">
+            <label for="initial-hour">Das </label>
+            <input  class="time" type="text" name="initial-hour" id="initial-hour" maxlength="2" disabled>
+            <label for="final-hour">às </label>
+            <input  class="time" type="text" name="final-hour" id="final-hour" maxlength="2" disabled>
+            <span>horas</span>
+          </div>
+        </div>
+
+        <button class="btn-reset" type="reset">Limpar</button>
+        <button class="btn-submit" type="submit">Enviar</button>
+      </form> 
+    </div>
+  </section>
+
+  <section id="footer">
+    <p>2020 <span>&copy;</span> LocalOffer</p>
+  </section>
+
+  <script src="/script.js"></script>  
+</body>
+</html>
